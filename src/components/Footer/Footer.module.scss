@@ -1,0 +1,48 @@
+.footer {
+    width: 100%;
+    background-color: #191C1F;
+    color: white;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.socialMedia {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.sep {
+    width: 100%;
+    height: 1px;
+    background-color: #3A3A3A;
+}
+
+.copyRight {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.copyRight p {
+    font-size: 0.8rem;
+}
