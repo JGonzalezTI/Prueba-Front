@@ -32,6 +32,7 @@ console.log('isError', isError)
       <p>Discount: {product.discount}%</p>
       <p>Rating: {product.rating} stars</p>
       <p>{product.reviews_number} reviews</p>
+      <div>Agregar al carrito</div>
     </div>
   );
 };

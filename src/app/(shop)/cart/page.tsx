@@ -2,11 +2,11 @@
 import { useCartStore } from '@/store/cartStore';
 import React from 'react';
 
-
-
 const Cart: React.FC = () => {
   const { items, removeItem, updateItemQuantity } = useCartStore();
   const total = items.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  console.log('items', items)
 
   // Función para manejar la actualización de la cantidad
   const updateCartHandler = (itemId: string, newQuantity: number) => {
@@ -27,23 +27,22 @@ const Cart: React.FC = () => {
               <div style={{ flex: 1 }}>
                 <h3>{item.name}</h3>
                 <p>Price: ${item.price}</p>
+               
                 <div>
                   <i
                     className="fas fa-minus-circle"
                     onClick={() => updateCartHandler(item.id, item.quantity - 1)}
                     style={{ cursor: 'pointer', marginRight: '5px' }}
-                  ></i>
+                  >-</i>
                   <span>{item.quantity}</span>
                   <i
                     className="fas fa-plus-circle"
                     onClick={() => updateCartHandler(item.id, item.quantity + 1)}
                     style={{ cursor: 'pointer', marginLeft: '5px' }}
-                  ></i>
+                  >+</i>
                 </div>
               </div>
-              <button onClick={() => removeItem(item.id)} style={{ marginLeft: '10px' }}>
-                Remove
-              </button>
+              <p>Subtotal: ${(item.price * item.quantity).toFixed(2)}</p>
             </div>
           ))}
           <div style={{ marginTop: '20px', textAlign: 'right' }}>

@@ -18,7 +18,23 @@ type CartStore = {
 
 export const useCartStore = create<CartStore>(set => ({
   items: [],
-  addItem: (item: CartItem) => set(state => ({ items: [...state.items, item] })),
+  addItem: (newItem) => set((state) => {
+    const existingItem = state.items.find(item => item.id === newItem.id);
+
+    if (existingItem) {
+      // Si el producto ya está en el carrito, actualiza la cantidad
+      return {
+        items: state.items.map(item =>
+          item.id === newItem.id
+            ? { ...item, quantity: item.quantity + newItem.quantity }
+            : item
+        ),
+      };
+    } else {
+      // Si el producto no está en el carrito, agrégalo
+      return { items: [...state.items, newItem] };
+    }
+  }),
   removeItem: (id: string) => set(state => ({ items: state.items.filter(item => item.id !== id) })),
   updateItemQuantity: (id: string, quantity: number) => set(state => ({
     items: state.items.map(item =>

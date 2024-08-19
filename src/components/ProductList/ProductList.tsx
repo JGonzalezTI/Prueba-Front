@@ -17,9 +17,9 @@ const ProductsList: React.FC = () => {
   }
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
-      {products.map((product: any) => (
-        <ProductCard key={product.id} {...product} />
+    <div className='productList-container'>
+      {products.map((product: any, index: any) => (
+        <ProductCard key={product.id} {...product} index={index} />
       ))}
     </div>
   );
