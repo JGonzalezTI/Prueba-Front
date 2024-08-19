@@ -5,7 +5,7 @@ import styles from "./Navbar.module.scss";
 import { useCartStore } from "@/store/cartStore";
 
 const Navbar = () => {
-    // Obtener el número de productos en el carrito
+
     const { items } = useCartStore();
     const totalItems = items.length;
 
@@ -21,12 +21,15 @@ const Navbar = () => {
                     </div>
                     <div className={styles.card}>
                         <Link href="/cart" className={styles.cartLink}>
-                            <FiShoppingCart size={28} />
+                        <div className="carthead">
+                        <FiShoppingCart size={28} />
                             {totalItems > 0 && (
-                                <div className={styles.cartCount}>
+                                <div className='cartCount'>
                                     {totalItems}
                                 </div>
                             )}
+                        </div>
+                          
                         </Link>
                     </div>
                 </nav>

@@ -1,10 +1,9 @@
-// src/app/(shop)/product/[id]/page.tsx
-"use client"; // Agrega esta línea para convertir el componente en un Client Component
+"use client";
 
-import React, { useEffect } from 'react';
+
 import { useRouter } from 'next/navigation';
 import { useProduct } from '../../../../hooks/useProduct';
-import { error } from 'console';
+
 
 type ProductDetailProps = {
   params: {

@@ -1,9 +1,8 @@
 .productList-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); // Seis columnas iguales
-    //max-width: 1200px; // Ancho máximo del contenedor
-    margin: 0 auto; // Centra el contenedor en la página
-    padding: 20px; // Relleno del contenedor
+    grid-template-columns: repeat(5, 1fr);  
+    margin: 0 auto; 
+    padding: 20px; 
   }
   
 

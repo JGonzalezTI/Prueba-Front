@@ -42,3 +42,23 @@
 .card{
     display: block;
 }
+
+.cartCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; 
+    height: 20px; 
+    border-radius: 50%;
+    background-color: #ffff; 
+    color: #1B6392; 
+    font-size: 12px; 
+    font-weight: bold;
+    position: absolute; 
+    top: 1; 
+    right: 1em; 
+  }
+
+  .carthead{
+    display: flex;
+  }

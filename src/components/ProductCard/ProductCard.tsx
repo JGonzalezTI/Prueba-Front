@@ -70,7 +70,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ id, name, price, discount, ra
               <p className="priceRegular">${price}</p>
             </div>
             <div className="responsiveBtn">
-              <button onClick={handleAddToCart}>Add to Cart</button>
+              <button onClick={handleAddToCart}>ADD TO CART</button>
             </div>
           </>
         )}
